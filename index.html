@@ -1,0 +1,92 @@
+<script>
+    //PROGRAMAR TODO DENTRO DE JUGAR QUE ES LA FUNCION QUE SE EJECUTA CON EL BOTON
+    function jugar(mensaje) {
+        let jugador1 = prompt("Elija: piedra, papel o tijera")
+        //0 = piedra, 1 = papel, 2 = tijera
+        let jugador2 = Math.round(Math.random() * (2 - 0) + 0);
+
+        //cambiamos el valor de piedra papel o tijera a numerico
+        switch(jugador1){
+            case 'piedra': jugador1 = 0
+                break
+            case 'papel': jugador1 = 1
+                break
+            case 'tijera': jugador1 = 2
+                break
+            default: jugador1 = 0
+                break
+        }
+        
+        if(jugador1 === 0 && jugador2 === 2) {
+            alert('Gana Piedra')
+        }
+        else if (jugador1 === 0 && jugador2 === 1) {
+            alert('Gana Papel')
+        }
+            else if (jugador1 === 0 && jugador2 === 0) {
+                alert('Empate')
+            }
+            if(jugador2 === 0 && jugador1 === 2) {
+            alert('Gana Piedra')
+        }
+        else if (jugador2 === 0 && jugador1 === 1) {
+            alert('Gana Papel')
+        }
+            else if (jugador2 === 0 && jugador1 === 0) {
+                alert('Empate')
+            }
+        if(jugador1 === 1 && jugador2 === 0) {
+            alert('Gana Papel')
+        }
+        else if (jugador1 === 1 && jugador2 === 2) {
+            alert('Gana Tijera')
+        }
+            else if (jugador1 === 1 && jugador2 === 1) {
+                alert('Empate')
+            }
+            if(jugador2 === 1 && jugador1 === 0) {
+            alert('Gana Papel')
+        }
+        else if (jugador2 === 1 && jugador1 === 2) {
+            alert('Gana Tijera')
+        }
+            else if (jugador2 === 1 && jugador1 === 1) {
+                alert('Empate')
+            }
+        if(jugador1 === 2 && jugador2 === 0) {
+            alert('Gana Piedra')
+        }
+        else if (jugador1 === 2 && jugador2 === 1) {
+            alert('Gana Tijera')
+        }
+            else if (jugador1 === 2 && jugador2 === 2) {
+                alert('Empate')
+            }
+            if(jugador2 === 2 && jugador1 === 0) {
+            alert('Gana Piedra')
+        }
+        else if (jugador2 === 2 && jugador1 === 1) {
+            alert('Gana Tijera')
+        }
+            else if (jugador2 === 2 && jugador1 === 2) {
+                alert('Empate')
+            }
+    
+
+        
+        console.log('Valores obtenidos:')
+        console.log(`Valor del jugador1: ${jugador1}`)
+        console.log(`Valor del jugador2: ${jugador2}`)
+        console.log('-------------------------------')
+        //para ver el console.log, en la pagina hacer click derechoo -> inspeccionar -> ir a la pestaña consola
+        //crear que si no se inserta piedra, papel o tijera, salte el cartel nuevamente para que ingresemos una opcion correcta (usar while y prompt)
+        //Crear la logica del juego para saber quien gana o empata :) suerteeeee (el aviso de quien gano puede hacerse con alert o console.log)
+        //vale ver google 100%
+
+
+
+    }  
+</script>
+<body>
+    <button onClick="jugar();">Jugar piedra papel o tijera</button>
+</body>

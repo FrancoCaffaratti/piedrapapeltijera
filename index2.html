@@ -1,0 +1,59 @@
+<script>
+    //PROGRAMAR TODO DENTRO DE JUGAR QUE ES LA FUNCION QUE SE EJECUTA CON EL BOTON
+    function jugar(mensaje) {
+        let jugador1 = prompt("Elija jugador1: piedra, papel o tijera")
+        let jugador2 = prompt("Elija jugador2: piedra, papel o tijera")
+
+        //cambiamos el valor de piedra papel o tijera a numerico
+        jugador1 = numeroDeEleccion(jugador1)
+        jugador2 = numeroDeEleccion(jugador2)
+        
+        if((jugador1 === 'piedra' && jugador2 === 'tijera') || (jugador2 === 'piedra' && jugador1 === 'tijera')) {
+            if(jugador1 === 'piedra') {
+                alert('Gana el jugador1 con piedra')
+            } else {
+                alert('Gana el jugador2 con piedra')
+            }
+        } else if ((jugador1 === 'piedra' && jugador2 === 'papel') || (jugador2 === 'piedra' && jugador1 === 'papel')) {
+            if(jugador1 === 'papel') {
+                alert('Gana el jugador1 con papel')
+            } else {
+                alert('Gana el jugador2 con papel')
+            }
+        } else if ((jugador1 === 'papel' && jugador2 === 'tijera') || (jugador2 === 'papel' && jugador1 === 'tijera')) {
+            if(jugador1 === 'tijera') {
+                alert('Gana el jugador1 con tijera')
+            } else {
+                alert('Gana el jugador2 con tijera')
+            }
+        } else {
+            alert('Es un empate')
+        }
+        
+        console.log('Valores obtenidos:')
+        console.log(`Valor del jugador1: ${jugador1}`)
+        console.log(`Valor del jugador2: ${jugador2}`)
+        console.log('-------------------------------')
+
+    }
+
+    function numeroDeEleccion(jugador) {
+        
+        switch(jugador){
+            case 'piedra': jugador
+                break
+            case 'papel': jugador
+                break
+            case 'tijera': jugador
+                break
+            default: jugador
+                break
+        }
+
+        return jugador
+    }
+</script>
+
+<body>
+    <button onClick="jugar();">Jugar piedra papel o tijera</button>
+</body>
