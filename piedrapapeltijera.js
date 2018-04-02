@@ -1,4 +1,5 @@
 function jugar(mensaje) {
+    //comienza el juego
     let jugador1 = Math.round(Math.random() * (2 - 0) + 0)
     //0 = piedra, 1 = papel, 2 = tijera
     let jugador2 = Math.round(Math.random() * (2 - 0) + 0)
